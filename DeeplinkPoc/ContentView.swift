@@ -12,7 +12,7 @@ struct ContentView: View {
 	var body: some View {
 		NavigationStack {
 			List(numberVM.numbers) { number in
-				NavigationLink(destination: Text(number.number.description)) {
+				NavigationLink(destination: NumberDetailView(number: number)) {
 					Text(String(number.number))
 				}
 			}

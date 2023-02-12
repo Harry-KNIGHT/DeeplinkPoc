@@ -11,6 +11,7 @@
 		3C168CB72998C9C100AD8A9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C168CB62998C9C100AD8A9A /* ContentView.swift */; };
 		3C168CB92998C9C200AD8A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C168CB82998C9C200AD8A9A /* Assets.xcassets */; };
 		3C168CBC2998C9C200AD8A9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C168CBB2998C9C200AD8A9A /* Preview Assets.xcassets */; };
+		3C168CC52998CDDD00AD8A9A /* NumberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C168CC42998CDDD00AD8A9A /* NumberDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3C168CB82998C9C200AD8A9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C168CBB2998C9C200AD8A9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C168CC32998CD9C00AD8A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C168CC42998CDDD00AD8A9A /* NumberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				3C168CC32998CD9C00AD8A9A /* Info.plist */,
 				3C168CB42998C9C100AD8A9A /* DeeplinkPocApp.swift */,
 				3C168CB62998C9C100AD8A9A /* ContentView.swift */,
+				3C168CC42998CDDD00AD8A9A /* NumberDetailView.swift */,
 				3C168CB82998C9C200AD8A9A /* Assets.xcassets */,
 				3C168CBA2998C9C200AD8A9A /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C168CB72998C9C100AD8A9A /* ContentView.swift in Sources */,
+				3C168CC52998CDDD00AD8A9A /* NumberDetailView.swift in Sources */,
 				3C168CB52998C9C100AD8A9A /* DeeplinkPocApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
