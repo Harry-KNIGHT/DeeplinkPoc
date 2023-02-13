@@ -12,9 +12,11 @@ struct DeeplinkPocApp: App {
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
+				.environmentObject(AddNumbers())
 				.onOpenURL { url in
 					print(url)
 				}
+
 		}
 	}
 }

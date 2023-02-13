@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NumberDetailView: View {
 	let number: Number
+	@EnvironmentObject var numberVM: AddNumbers
     var body: some View {
 		Text(number.number.description)
 			.font(.largeTitle)
@@ -19,5 +20,6 @@ struct NumberDetailView: View {
 struct NumberDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NumberDetailView(number: Number(number: 69))
+			.environmentObject(AddNumbers())
     }
 }
