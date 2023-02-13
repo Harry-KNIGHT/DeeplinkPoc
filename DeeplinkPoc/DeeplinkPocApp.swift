@@ -9,13 +9,27 @@ import SwiftUI
 
 @main
 struct DeeplinkPocApp: App {
+	@State var deeplinkTarget: DeeplinkManager.DeeplinkTarget?
+
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
-				.environmentObject(AddNumbers())
-				.onOpenURL { url in
-					print(url)
+			Group {
+				switch self.deeplinkTarget {
+				case .home:
+					ContentView()
+				case .details(let queryInfo):
+					NumberDetailView(number: queryInfo)
+				case .none:
+					ContentView()
 				}
+			}
+			.onOpenURL { url in
+				let deeplinkManager = DeeplinkManager()
+				let deeplink = deeplinkManager.manage(url)
+				self.deeplinkTarget = deeplink
+			}
+			.environmentObject(AddNumbers())
+
 
 		}
 	}
