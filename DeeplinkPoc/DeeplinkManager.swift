@@ -15,13 +15,14 @@ class DeeplinkManager {
 	}
 
 	class DeepLinkConstants {
-		static let scheme = "cvs"
-		static let host = "com.createwithswift"
-		static let detailsPath = "/details"
+		static let scheme = "deeplink"
+		static let host = "com.numbers"
+		static let detailsPath = "/number"
 		static let query = "id"
 	}
-
-	func manage(url: URL) -> DeeplinkTarget {
+	// path = deeplink://com.numers/number?id=5
+	
+	func manage(_ url: URL) -> DeeplinkTarget {
 		guard url.scheme == DeepLinkConstants.scheme,
 			  url.host == DeepLinkConstants.host,
 			  url.path == DeepLinkConstants.detailsPath,

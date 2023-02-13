@@ -18,7 +18,7 @@ struct DeeplinkPocApp: App {
 				case .home:
 					ContentView()
 				case .details(let queryInfo):
-					NumberDetailView(number: queryInfo)
+					NumberDetailView(number: Number(number: 6))
 				case .none:
 					ContentView()
 				}
@@ -29,8 +29,6 @@ struct DeeplinkPocApp: App {
 				self.deeplinkTarget = deeplink
 			}
 			.environmentObject(AddNumbers())
-
-
 		}
 	}
 }
