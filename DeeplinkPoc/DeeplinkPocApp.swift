@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct DeeplinkPocApp: App {
     
+    @State var deeplinkTarget: DeeplinkManager.DeeplinkTarget?
     @State private var presentedNums = [Int]()
     
     var body: some Scene {
@@ -22,25 +23,20 @@ struct DeeplinkPocApp: App {
             }
             .onOpenURL { url in
                 
-                let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
-                
-                if let urlComponents {
-                    
-                    if url.pathComponents.contains("number") {
-                        
-                        if let queryItems = urlComponents.queryItems {
-                            
-                            for query in queryItems {
+                deeplinkTarget = DeeplinkManager().manage(url)
                                 
-                                if let value = query.value {
-                                    
-                                    if let numValue = Int(value) {
-                                        
-                                        presentedNums.append(numValue)
-                                    }
-                                }
-                            }
+                if let deeplinkTarget {
+                    
+                    switch deeplinkTarget {
+                        
+                    case.details(reference: let value):
+                                                                        
+                        if let intVal = Int(value) {
+                            presentedNums.append(intVal)
                         }
+                        
+                    default: return
+                        
                     }
                 }
             }

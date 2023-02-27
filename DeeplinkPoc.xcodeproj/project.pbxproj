@@ -58,9 +58,9 @@
 			children = (
 				3C168CC32998CD9C00AD8A9A /* Info.plist */,
 				3C168CB42998C9C100AD8A9A /* DeeplinkPocApp.swift */,
+				3CD56040299ACF7F008D652D /* DeeplinkManager.swift */,
 				3C168CB62998C9C100AD8A9A /* ContentView.swift */,
 				3C168CC42998CDDD00AD8A9A /* NumberDetailView.swift */,
-				3CD56040299ACF7F008D652D /* DeeplinkManager.swift */,
 				3C168CB82998C9C200AD8A9A /* Assets.xcassets */,
 				3C168CBA2998C9C200AD8A9A /* Preview Content */,
 			);
